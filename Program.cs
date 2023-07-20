@@ -4,7 +4,7 @@
 public class App
 {   
     
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("olá, teste");
         }
