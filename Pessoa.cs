@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Pessoa
-    {
-        int idade = 0;
-        double altura = 0;
-        string nome = " ";
 
+    class Pessoa
+    {
+        private class atributos
+        {
+            int idade = 0;
+            double altura = 0;
+            string nome = " ";
+        }
+                       
     }
+    
 
 }
