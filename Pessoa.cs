@@ -50,12 +50,14 @@ namespace ConsoleApp1
             //retorno
             return retorno;
         }
-        public void Dados()
+        public void dados()
         {   //recebe calculo
             double obterCaulculo = calculo();
             //recebe situação
             string obeterSituacao = situacao(obterCaulculo);
-                       
+            
+            Console.WriteLine("Seu imc é de ".ToUpper() +  obterCaulculo);
+            Console.WriteLine("Sua situação é ".ToUpper() + obeterSituacao);
         }
     }
         
