@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace ConsoleApp1
     class Pessoa
     {   //propiedades
         public double peso, altura;
+        public string nome ="";
 
         //calculo
         public double calculo()
@@ -50,15 +52,28 @@ namespace ConsoleApp1
             //retorno
             return retorno;
         }
+        public string tabela()
+        {
+            string lista = "\r\nEntenda o seu resultado" +
+            "\r\nAcima de 40,0. Obesidade. grau III. ..." +
+            "\r\nEntre 35,0 e 39,9. Obesidade. grau II. ..." +
+            "\r\nEntre 30,0 e 34,9. Obesidade grau I. Sinal de alerta! ..." +
+            "\r\nEntre 25,0 e 29,9. Sobrepeso. ..." +
+            "\r\nEntre 18,6 e 24,9. Normal. ..." +
+            "\r\n18,5 ou menos. Abaixo do normal.";
+            return lista;
+        }
         public void dados()
         {   //recebe calculo
-            double obterCaulculo = calculo();
+            double obterCalculo = calculo();
             //recebe situação
-            string obeterSituacao = situacao(obterCaulculo);
-            
-            Console.WriteLine("Seu imc é de ".ToUpper() +  obterCaulculo);
-            Console.WriteLine("Sua situação é ".ToUpper() + obeterSituacao);
+            string obeterSituacao = situacao(obterCalculo);
+            Console.WriteLine(nome.ToUpper());
+            Console.WriteLine("Seu imc é de " +  obterCalculo.ToString("N2"));
+            Console.WriteLine("Sua situação é " + obeterSituacao.ToUpper());
+            Console.WriteLine(tabela().ToUpper());
         }
+      
     }
         
 
