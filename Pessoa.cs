@@ -8,14 +8,29 @@ namespace ConsoleApp1
 {
 
     class Pessoa
-    {
-        private class atributos
+    {   //propiedades
+        public double peso, altura;
+
+        //calculo
+        public double calculo()
         {
-            int idade = 0;
-            double altura = 0;
-            string nome = " ";
+            return peso / (altura*altura);
         }
-                       
+
+        public string situacao(int imc)
+        {   //variavel
+            string retorno;
+
+            if (imc < 18.5)
+            {
+                retorno = "Abaixo do peso";
+            } else if ()
+            {
+
+            }
+
+        }
+
     }
     
 
